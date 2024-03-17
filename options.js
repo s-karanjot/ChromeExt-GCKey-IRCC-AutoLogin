@@ -1,5 +1,5 @@
 $(window).on("load", () => {
-    chrome.storage.sync.get(['id', 'pass', 'q1', 'a1', 'q2', 'a2', 'q3', 'a3', 'q4', 'a4'], function (items) {
+    chrome.storage.sync.get(['id', 'pass', 'q1', 'a1', 'q2', 'a2', 'q3', 'a3', 'q4', 'a4', 'otp'], function (items) {
         $('#id').val(items['id']);
         $('#pass').val(items['pass']);
         $('#q1').val(items['q1']);
@@ -10,6 +10,7 @@ $(window).on("load", () => {
         $('#a3').val(items['a3']);
         $('#q4').val(items['q4']);
         $('#a4').val(items['a4']);
+        $('#otp').val(items['otp']);
     })
 })
 
@@ -27,7 +28,8 @@ $(function () {
             $('#q3').val() == '' ||
             $('#a3').val() == '' ||
             $('#q4').val() == '' ||
-            $('#a4').val() == ''
+            $('#a4').val() == '' ||
+            $('#otp').val() == ''
         ) {
             $("#error").attr("hidden", false);
         }
@@ -43,7 +45,8 @@ $(function () {
                     'q3': $('#q3').val(),
                     'a3': $('#a3').val(),
                     'q4': $('#q4').val(),
-                    'a4': $('#a4').val()
+                    'a4': $('#a4').val(),
+                    'otp': $('#otp').val()
                 }
             );
             $("#saved").attr("hidden", false);
