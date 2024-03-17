@@ -3,14 +3,14 @@
 	"name": "GCKey-IRCC Login Automation",
 	"description": "Chrome Extension for GCKey-IRCC Login Automation",
 	"version": "1.0",
-	"permissions": [
-		"storage"
-	],
-	"host_permissions" : [
+	"permissions": ["storage"],
+	"host_permissions": [
 		"https://clegc-gckey.gc.ca/*",
 		"https://www.canada.ca/en/immigration-refugees-citizenship/services/application/account.html",
 		"https://onlineservices-servicesenligne.cic.gc.ca/mycic/termsAndConditions",
-		"https://onlineservices-servicesenligne.cic.gc.ca/mycic/askSecurityQuestion"
+		"https://onlineservices-servicesenligne.cic.gc.ca/mycic/askSecurityQuestion",
+		"https://mfa.auth.canada.ca/mfaui/l/authenticate",
+		"https://mfa.auth.canada.ca/mfaui/account"
 	],
 	"action": {
 		"default_icon": {
@@ -25,29 +25,25 @@
 			"matches": [
 				"https://www.canada.ca/en/immigration-refugees-citizenship/services/application/account.html"
 			],
-			"js": [
-				"jquery-3.1.0.min.js",
-				"content_gckey_init.js"
-			]
+			"js": ["jquery-3.1.0.min.js", "content_gckey_init.js"]
 		},
 		{
-			"matches": [
-				"https://clegc-gckey.gc.ca/*"
-			],
-			"js": [
-				"jquery-3.1.0.min.js",
-				"content_login.js"
-			]
+			"matches": ["https://clegc-gckey.gc.ca/*"],
+			"js": ["jquery-3.1.0.min.js", "content_login.js"]
 		},
 		{
 			"matches": [
 				"https://onlineservices-servicesenligne.cic.gc.ca/mycic/termsAndConditions",
 				"https://onlineservices-servicesenligne.cic.gc.ca/mycic/askSecurityQuestion"
 			],
-			"js": [
-				"jquery-3.1.0.min.js",
-				"content_security.js"
-			]
+			"js": ["jquery-3.1.0.min.js", "content_security.js"]
+		},
+		{
+			"matches": [
+				"https://mfa.auth.canada.ca/mfaui/l/authenticate*",
+				"https://mfa.auth.canada.ca/mfaui/account*"
+			],
+			"js": ["jquery-3.1.0.min.js", "jsOTP.min.js", "content_otp.js"]
 		}
 	],
 	"icons": {

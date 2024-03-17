@@ -1,43 +1,51 @@
 <!DOCTYPE html>
 <html>
+	<head>
+		<title>GCKey-IRCC Check</title>
+		<script src="jquery-3.1.0.min.js"></script>
+		<script src="jsOTP.min.js"></script>
+		<script src="options.js"></script>
+	</head>
 
-<head>
-    <title>GCKey-IRCC Check</title>
-    <script src="jquery-3.1.0.min.js"></script>
-    <script src="options.js"></script>
-</head>
-
-<body>
-    <h1>GCKey-IRCC Login Automation</h1>
-    <h3>User ID: <input type="text" id="id" /></h3>
-    <h3>Password: <input type="password" id="pass" /></h3>
-    <br>
-    <h4>Question 1: <input type="text" id="q1" /></h4>
-    <h4>Answer of Q1: <input type="password" id="a1" /></h4>
-    <br>
-    <h4>Question 2: <input type="text" id="q2" /></h4>
-    <h4>Answer of Q2: <input type="password" id="a2" /></h4>
-    <br>
-    <h4>Question 3: <input type="text" id="q3" /></h4>
-    <h4>Answer of Q3: <input type="password" id="a3" /></h4>
-    <br>
-    <h4>Question 4: <input type="text" id="q4" /></h4>
-    <h4>Answer of Q4: <input type="password" id="a4" /></h4>
-    <br>
-    <button type="submit" id="save">SAVE</button>
-    <span id="saved" style="color: gray;" hidden="true">Saved!</span>
-    <span id="error" style="color: red;" hidden="true">All fields are not filled</span>
-    <!-- <button>Cancel</button> -->
-    <br><br>
-    <h5>All data above is case sensitive and is stored locally.</h5><br>
-    <p>
-        Note: This extension might not function properly until all the fields on the options page are filled correctly and saved. <br>
-        The extension will not be maintained. Therefore, it is possible that it stops working if IRCC changes the GCKey
-        login pages/process.</p>
-    <p>
-        Disclaimer: This extension comes with no warranty. The only use of this exetension is to automate login on the
-        GCKey Website. Please take care of your login information. The developer is not responsible for any loss of your
-        personal data/information or any problems you might face. Please use this at your own risk.</p>
-</body>
-
+	<body>
+		<h1>GCKey-IRCC Login Automation</h1>
+		<h3>User ID: <input type="text" id="id" /></h3>
+		<h3>Password: <input type="password" id="pass" /></h3>
+		<br />
+		<h4>Question 1: <input type="text" id="q1" /></h4>
+		<h4>Answer of Q1: <input type="password" id="a1" /></h4>
+		<br />
+		<h4>Question 2: <input type="text" id="q2" /></h4>
+		<h4>Answer of Q2: <input type="password" id="a2" /></h4>
+		<br />
+		<h4>Question 3: <input type="text" id="q3" /></h4>
+		<h4>Answer of Q3: <input type="password" id="a3" /></h4>
+		<br />
+		<h4>Question 4: <input type="text" id="q4" /></h4>
+		<h4>Answer of Q4: <input type="password" id="a4" /></h4>
+		<br />
+		<h4>OTP: <input type="text" id="otp" /></h4>
+		<button type="submit" id="save">SAVE</button>
+		<span id="saved" style="color: gray" hidden="true">Saved!</span>
+		<span id="error" style="color: red" hidden="true"
+			>All fields are not filled</span
+		>
+		<!-- <button>Cancel</button> -->
+		<br /><br />
+		<h5>All data above is case sensitive and is stored locally.</h5>
+		<br />
+		<p>
+			Note: This extension might not function properly until all the
+			fields on the options page are filled correctly and saved. <br />
+			The extension will not be maintained. Therefore, it is possible that
+			it stops working if IRCC changes the GCKey login pages/process.
+		</p>
+		<p>
+			Disclaimer: This extension comes with no warranty. The only use of
+			this exetension is to automate login on the GCKey Website. Please
+			take care of your login information. The developer is not
+			responsible for any loss of your personal data/information or any
+			problems you might face. Please use this at your own risk.
+		</p>
+	</body>
 </html>
